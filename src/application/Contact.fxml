@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="320.0" prefWidth="311.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="72.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact us:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="72.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8892196239" />
+      <Text layoutX="72.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="903627061" />
+      <Text layoutX="166.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sumanth472@gmail.com" />
+      <Text layoutX="157.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="avenger1997.ac@gmail.com" />
+      <Text layoutX="72.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="72.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bangalore" />
+   </children>
+</AnchorPane>

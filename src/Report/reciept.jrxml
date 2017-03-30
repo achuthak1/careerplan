@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-21T20:00:43 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reciept" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="feb7cdd7-0699-4e9b-bd9b-e0ab73043022">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT pa.usn,
+   pa.name,
+	pa.annual_pay,
+	pa.fast_pay,
+	pa.makeup_pay,
+	pa.reval_pay,
+	pa.Library,
+	pa.Id,pa.Invoice,p.subject_name,u.department,u.semester,
+	p.c_id,p.reval_amt
+FROM payment pa,
+	userdata u,
+	paymentsapplied p
+WHERE 
+	 pa.usn = u.username AND
+	 u.username=p.usn
+	 AND u.session = 1 AND pa.reval_pay>0 AND  pa.RevalStatus='paid']]>
+	</queryString>
+	<field name="usn" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="annual_pay" class="java.lang.Integer"/>
+	<field name="fast_pay" class="java.lang.Integer"/>
+	<field name="makeup_pay" class="java.lang.Integer"/>
+	<field name="reval_pay" class="java.lang.Integer"/>
+	<field name="Library" class="java.lang.Integer"/>
+	<field name="Id" class="java.lang.Integer"/>
+	<field name="Invoice" class="java.lang.String"/>
+	<field name="subject_name" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="semester" class="java.lang.Integer"/>
+	<field name="c_id" class="java.lang.String"/>
+	<field name="reval_amt" class="java.lang.Integer"/>
+	<background>
+		<band height="90" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-20" y="0" width="595" height="90" uuid="25668d9b-37a1-4b56-9c46-b4d186c67f10"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="80" height="80" uuid="89391504-e66c-4bfe-88a6-e89378e1e274"/>
+				<imageExpression><![CDATA["file:/C:/Users/HP/workspace/Noq%20bmsce/src/application/bms.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="60" y="0" width="60" height="20" uuid="65d2c0db-5678-420e-b259-2366266ec07e"/>
+				<text><![CDATA[USN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="30" width="60" height="20" uuid="c351bece-7bb4-4a96-8f35-033267a7cd30"/>
+				<text><![CDATA[Department:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="60" width="60" height="20" uuid="9a8c456f-d114-417e-9969-1f735c73b179"/>
+				<text><![CDATA[semester:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="20" uuid="4e0e3206-9031-46d7-9878-a428193993c8"/>
+				<textFieldExpression><![CDATA[$F{usn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="30" width="100" height="20" uuid="7d33da96-6263-40f6-b2bc-d1313a4e702a"/>
+				<textFieldExpression><![CDATA[$F{department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="60" width="100" height="20" uuid="e2cb5ed0-a9e4-4a34-ac98-0990d21e26d6"/>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="25" width="170" height="30" uuid="c6047e92-e24b-40b7-8463-f416b7dd672a"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Reciept]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="40" height="20" uuid="3f5a3bc0-6500-4c7b-b39b-ad179a157868"/>
+				<text><![CDATA[Invoice:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="30" width="40" height="20" uuid="7d966821-0a1f-4db7-87fc-6913d6f85af0"/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="410" y="60" width="100" height="20" uuid="866fb59b-aeca-428c-b926-32aad6e1539a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="85" height="20" uuid="a2a771be-7be7-4896-abf4-c13d63e7ba0e"/>
+				<textFieldExpression><![CDATA[$F{Invoice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="30" width="125" height="20" uuid="5d970a7e-8f89-407e-a1e1-e060e47c1f2f"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="0" width="230" height="30" uuid="2cc5f5b7-c195-4116-a19b-46367f78ccd4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Revalution]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="40" width="230" height="30" uuid="587d8e78-4e5d-4280-a2d7-fce78d1812c7"/>
+				<text><![CDATA[Course Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="40" width="100" height="30" uuid="177c1b14-e452-4c72-acf6-0fe12dab435d"/>
+				<text><![CDATA[Revaluation Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="40" width="180" height="30" uuid="782a1ae7-6c67-438a-9fda-17a3e2273139"/>
+				<text><![CDATA[Subject]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="430" y="0" width="100" height="30" uuid="f6781e1a-94aa-4e74-abdb-13b5238a5768"/>
+				<textFieldExpression><![CDATA[$F{reval_amt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="0" width="230" height="30" uuid="96f04340-0770-48b0-aab1-10f50e0c938e"/>
+				<textFieldExpression><![CDATA[$F{c_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="180" height="30" uuid="2bf1a0da-d569-4556-adc0-42747f358b1e"/>
+				<textFieldExpression><![CDATA[$F{subject_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="69" splitType="Stretch">
+			<textField>
+				<reportElement x="400" y="0" width="157" height="30" uuid="d1871c8f-bfa3-4430-ae9f-2ffe3aa67482"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reval_pay}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="30" uuid="b7239351-95cb-492c-946d-5210fe647383"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Amount:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="39" width="140" height="30" uuid="cafabcd1-2716-43a5-9c6f-2f6c27cfaad9"/>
+				<text><![CDATA[Payment done successfully]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

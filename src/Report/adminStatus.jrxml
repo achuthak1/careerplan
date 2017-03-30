@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-03T05:47:11 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="status" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c16de175-5289-439d-b442-cae17e7d1c72">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="647"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="353"/>
+	<queryString>
+		<![CDATA[SELECT *
+FROM `PAYMENT`]]>
+	</queryString>
+	<field name="usn" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="fast_flag" class="java.lang.String"/>
+	<field name="annual_pay" class="java.lang.Integer"/>
+	<field name="fast_pay" class="java.lang.Integer"/>
+	<field name="makeup_pay" class="java.lang.Integer"/>
+	<field name="reval_pay" class="java.lang.Integer"/>
+	<field name="Library" class="java.lang.Integer"/>
+	<field name="Id" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="320" y="16" width="194" height="30" uuid="4ae119b8-5518-48ac-81b9-b6d6bd05f623"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Status]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="680" y="0" width="100" height="30" uuid="8cf3bd20-cd3b-41b8-9c7a-c36c1bad0c27"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="680" y="33" width="100" height="30" uuid="e14b4762-57b1-40eb-822f-3643dd0f621a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="80" height="30" uuid="2aaf4939-d431-4751-aaf8-a67e2a4b5084"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[USN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="30" width="124" height="30" uuid="12d2f5c9-da2c-4715-95d0-4433e57b9b27"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="30" width="102" height="30" uuid="6861d4d6-fed7-4922-acd4-864e672feb0d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Annual ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="30" width="102" height="30" uuid="1f1fad7e-3e9e-46a1-878d-cdf1d21b6367"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fastrack  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="30" width="102" height="30" uuid="732fe96f-0d8d-4bb6-8ae1-8e5a4832574e"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Revaluation ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="508" y="30" width="102" height="30" uuid="ce8a3da6-80e1-4b57-a179-74a1063bed6a"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MakeUp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="30" width="102" height="30" uuid="f6c1758f-f901-4cad-a5e6-949a0aed9536"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Library Card]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="30" width="102" height="30" uuid="32dd3bfd-8fed-46f1-93e5-98672ebdf3b6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IdCard]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="30" uuid="ad554255-cfbb-4a53-b25d-958bd6a6d94d"/>
+				<textFieldExpression><![CDATA[$F{usn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="1" width="122" height="30" uuid="3f95df4b-7abf-4e97-8542-394ac06d4d5c"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="100" height="30" uuid="2ef233da-fc62-46a1-b96b-8d0db5b786ab"/>
+				<textFieldExpression><![CDATA[$F{annual_pay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="1" width="100" height="30" uuid="dc099ef1-9b7b-485c-8d45-6505ae8504b9"/>
+				<textFieldExpression><![CDATA[$F{fast_pay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="0" width="100" height="30" uuid="52587d43-6b58-4809-b73a-4498bef1a297"/>
+				<textFieldExpression><![CDATA[$F{makeup_pay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="502" y="0" width="100" height="30" uuid="8ff5799e-87f5-46e0-af61-226fc181b302"/>
+				<textFieldExpression><![CDATA[$F{reval_pay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="600" y="0" width="100" height="30" uuid="4092f1aa-3f24-43ba-ba00-6266a33264a6"/>
+				<textFieldExpression><![CDATA[$F{Library}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="700" y="0" width="100" height="30" uuid="cf512ca9-1fb8-4d20-83bf-6865555cb2fd"/>
+				<textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+</jasperReport>

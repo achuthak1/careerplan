@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane style="-fx-border-color: ff00ff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.register">
+   <children>
+      <JFXTextField fx:id="name" layoutX="342.0" layoutY="106.0" maxWidth="187.0" minWidth="168.0" prefHeight="31.0" prefWidth="180.0" promptText="Name" />
+      <JFXPasswordField fx:id="password" layoutX="342.0" layoutY="285.0" maxWidth="180.0" minWidth="173.0" prefHeight="31.0" prefWidth="180.0" promptText="Password" />
+      <JFXTextField fx:id="email" layoutX="343.0" layoutY="164.0" maxWidth="180.0" minWidth="164.0" prefHeight="31.0" prefWidth="180.0" promptText="Email" />
+      <JFXTextField fx:id="contact" layoutX="341.0" layoutY="223.0" maxWidth="180.0" minWidth="168.0" prefHeight="31.0" prefWidth="180.0" promptText="Contact" />
+      <JFXPasswordField fx:id="repassword" layoutX="341.0" layoutY="348.0" maxWidth="180.0" minWidth="165.0" prefHeight="31.0" prefWidth="180.0" promptText="Confirm Password" />
+      <JFXButton fx:id="registerButton" buttonType="RAISED" layoutX="313.0" layoutY="417.0" onAction="#submitAction" prefHeight="31.0" prefWidth="112.0" style="-fx-border-color: ffff00;" text="Register" />
+      <Label alignment="CENTER" layoutX="310.0" prefHeight="59.0" prefWidth="248.0" text="Career-Ahead">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="signInButton" buttonType="RAISED" layoutX="434.0" layoutY="417.0" onAction="#signInAction" prefHeight="31.0" prefWidth="112.0" style="-fx-border-color: ffff00;" text="SignIn" />
+      <JFXTextArea layoutY="83.0" maxWidth="359.0" minWidth="154.0" prefHeight="387.0" prefWidth="193.0" text="The Plan">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea editable="false" layoutX="676.0" layoutY="83.0" maxWidth="180.0" minWidth="154.0" prefHeight="387.0" prefWidth="180.0" text="Quote of  the Day                                      Rise Aheaad                   Rise Ahead">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXTextArea>
+      <Label fx:id="invalid_label" layoutX="313.0" layoutY="449.0" />
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

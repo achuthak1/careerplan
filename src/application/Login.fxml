@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<!-- <BorderPane id="borderpane" prefHeight="1280" prefWidth="720" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Login">
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text nodeOrientation="LEFT_TO_RIGHT" text="Welcome to NoQ BMSCE Portal">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="29.0" />
+               </font>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </Text>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label fx:id="username" text="Username" />
+                  <TextField fx:id="username_box" />
+                  <Label fx:id="password" text="Password" />
+                  <PasswordField fx:id="password_box" />
+                  <Button fx:id="button" mnemonicParsing="false" onAction="#HandleSubmitButtonAction" text="Submit" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="60.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Label fx:id="invalid_label">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>-->
+
+<AnchorPane fx:id="pane" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Login">
+   <children>
+      <Pane layoutX="902.0" layoutY="167.0" prefHeight="324.0" prefWidth="331.0">
+         <children>
+            <JFXTextField fx:id="username" focusColor="#3f95a8" layoutX="49.0" layoutY="45.0" maxWidth="227.0" minWidth="197.0" prefHeight="57.0" prefWidth="227.0" promptText="Username" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="password" focusColor="#3f95a8" layoutX="48.0" layoutY="131.0" maxWidth="227.0" minWidth="189.0" prefHeight="57.0" prefWidth="227.0" promptText="Password" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></JFXPasswordField>
+            <JFXButton fx:id="submit" layoutX="108.0" layoutY="216.0" onAction="#submitAction" prefHeight="39.0" prefWidth="108.0" text="LogIn">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font></JFXButton>
+            <Label fx:id="invalid_label" layoutX="71.0" layoutY="312.0" textFill="RED">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="460.0" layoutY="62.0" text="Career-Ahead ">
+         <font>
+            <Font name="Sitka Heading Italic" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="646.0" layoutY="128.0">
+         <font>
+            <Font name="Sitka Text" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

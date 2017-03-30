@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-21T19:37:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fastrack_Reciept" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8920c085-bfb1-434f-83fd-6db3c6aa86ab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[SELECT pa.usn,
+   pa.name,
+	pa.annual_pay,
+	pa.fast_pay,
+	pa.makeup_pay,
+	pa.reval_pay,
+	pa.Library,
+	pa.Id,pa.Invoice,u.department,u.semester,
+	p.c_id,p.subject_name,p.fastrack_amt
+FROM payment pa,
+	userdata u,
+	fastrack p
+WHERE 
+	 pa.usn = u.username AND
+	 u.username=p.usn
+	 AND u.session = 1 AND FastrackStatus='paid']]>
+	</queryString>
+	<field name="usn" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="annual_pay" class="java.lang.Integer"/>
+	<field name="fast_pay" class="java.lang.Integer"/>
+	<field name="makeup_pay" class="java.lang.Integer"/>
+	<field name="reval_pay" class="java.lang.Integer"/>
+	<field name="Library" class="java.lang.Integer"/>
+	<field name="Id" class="java.lang.Integer"/>
+	<field name="Invoice" class="java.lang.String"/>
+	<field name="department" class="java.lang.String"/>
+	<field name="semester" class="java.lang.Integer"/>
+	<field name="c_id" class="java.lang.String"/>
+	<field name="subject_name" class="java.lang.String"/>
+	<field name="fastrack_amt" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<image>
+				<reportElement x="-20" y="0" width="80" height="80" uuid="89391504-e66c-4bfe-88a6-e89378e1e274"/>
+				<imageExpression><![CDATA["file:/C:/Users/HP/workspace/Noq%20bmsce/src/application/bms.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="60" y="0" width="60" height="20" uuid="65d2c0db-5678-420e-b259-2366266ec07e"/>
+				<text><![CDATA[USN:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="30" width="60" height="20" uuid="c351bece-7bb4-4a96-8f35-033267a7cd30"/>
+				<text><![CDATA[Department:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="60" width="60" height="20" uuid="9a8c456f-d114-417e-9969-1f735c73b179"/>
+				<text><![CDATA[semester:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="20" uuid="4e0e3206-9031-46d7-9878-a428193993c8"/>
+				<textFieldExpression><![CDATA[$F{usn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="30" width="100" height="20" uuid="7d33da96-6263-40f6-b2bc-d1313a4e702a"/>
+				<textFieldExpression><![CDATA[$F{department}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="60" width="100" height="20" uuid="e2cb5ed0-a9e4-4a34-ac98-0990d21e26d6"/>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="220" y="25" width="170" height="30" uuid="c6047e92-e24b-40b7-8463-f416b7dd672a"/>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Reciept]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="40" height="20" uuid="3f5a3bc0-6500-4c7b-b39b-ad179a157868"/>
+				<text><![CDATA[Invoice:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="30" width="40" height="20" uuid="7d966821-0a1f-4db7-87fc-6913d6f85af0"/>
+				<text><![CDATA[Name:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="410" y="60" width="100" height="20" uuid="866fb59b-aeca-428c-b926-32aad6e1539a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="85" height="20" uuid="a2a771be-7be7-4896-abf4-c13d63e7ba0e"/>
+				<textFieldExpression><![CDATA[$F{Invoice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="30" width="125" height="20" uuid="5d970a7e-8f89-407e-a1e1-e060e47c1f2f"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" uuid="bbff3b92-e9ca-41d1-ab43-5f821a97e9cc"/>
+				<text><![CDATA[c_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" uuid="f49f11cf-fe8c-42a1-a0a7-49ae2ad26c15"/>
+				<text><![CDATA[subject_name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" uuid="7533e757-54b2-4329-83b0-abc17657ec58"/>
+				<text><![CDATA[fastrack_amt]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="-2" y="0" width="185" height="30" uuid="58caa330-73d8-4452-8cd3-947ad1ad3512"/>
+				<textFieldExpression><![CDATA[$F{c_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="183" y="0" width="185" height="30" uuid="9fb9002b-7b7d-4b41-98ea-5956894dfa58"/>
+				<textFieldExpression><![CDATA[$F{subject_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="40056e2e-cfe2-4ad0-9d70-cb7f360f8d4e"/>
+				<textFieldExpression><![CDATA[$F{fastrack_amt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

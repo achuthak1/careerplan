@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="132.0" layoutY="14.0" text="NoQ BMSCE">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="79.0" prefHeight="71.0" prefWidth="358.0" text="NOQ BMSCE(Pay with ease) is an online payment system.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="150.0" text="Programmed by:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="183.0" text="Polisetty sumanth" />
+      <Label layoutX="45.0" layoutY="212.0" text="R krishna vamsi" />
+      <Label layoutX="45.0" layoutY="239.0" text="Achutha K" />
+      <Label layoutX="21.0" layoutY="283.0" text="Mentor:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="313.0" text="Sindhu K" />
+      <Label layoutX="59.0" layoutY="340.0" text="Assistant profeesor of ISE department" />
+      <Label layoutX="231.0" layoutY="183.0" text="1BM14IS063" />
+      <Label layoutX="231.0" layoutY="212.0" text="1BM14IS072" />
+      <Label layoutX="231.0" layoutY="239.0" text="1BM15IS400" />
+   </children>
+</AnchorPane>

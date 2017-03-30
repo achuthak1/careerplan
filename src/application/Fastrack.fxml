@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Fastrack">
+   <children>
+      <Label layoutX="18.0" prefHeight="48.0" prefWidth="149.0" text="FASTRACK">
+         <font>
+            <Font name="Lucida Handwriting Italic" size="24.0" />
+         </font>
+      </Label>
+      <MenuButton fx:id="semester" layoutX="620.0" layoutY="36.0" mnemonicParsing="false" text="SEM">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#semesterThreeAction" text="3" />
+          <MenuItem mnemonicParsing="false" onAction="#semesterFourAction" text="4" />
+        </items>
+      </MenuButton>
+      <JFXCheckBox fx:id="first" layoutX="9.0" layoutY="149.0" onAction="#firstAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox fx:id="second" layoutX="9.0" layoutY="183.0" onAction="#secondAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox fx:id="third" layoutX="9.0" layoutY="219.0" onAction="#thirdAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox fx:id="fourth" layoutX="9.0" layoutY="259.0" onAction="#fourthAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXCheckBox>
+      <JFXCheckBox fx:id="fifth" layoutX="9.0" layoutY="300.0" onAction="#fifthAction">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXCheckBox>
+      <JFXTextField fx:id="one" layoutX="339.0" layoutY="142.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="two" layoutX="339.0" layoutY="176.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="three" layoutX="339.0" layoutY="212.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="four" layoutX="339.0" layoutY="252.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="five" layoutX="339.0" layoutY="293.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="Add" layoutX="319.0" layoutY="374.0" onAction="#addAction" prefHeight="31.0" prefWidth="56.0" ripplerFill="WHITE" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <Label layoutX="96.0" layoutY="96.0" text="Courses">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="392.0" layoutY="96.0" text="Amount">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="c1" layoutX="527.0" layoutY="145.0" prefHeight="25.0" prefWidth="42.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="c2" layoutX="527.0" layoutY="179.0" prefHeight="25.0" prefWidth="42.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="c3" layoutX="527.0" layoutY="215.0" prefHeight="25.0" prefWidth="42.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="c4" layoutX="527.0" layoutY="255.0" prefHeight="25.0" prefWidth="42.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="c5" layoutX="527.0" layoutY="296.0" prefHeight="25.0" prefWidth="42.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="529.0" layoutY="96.0" text="Credits">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="622.0" layoutY="96.0" text="Course-Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <JFXTextField fx:id="cid1" layoutX="574.0" layoutY="142.0" maxWidth="123.0" minWidth="123.0" prefHeight="31.0" prefWidth="123.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="cid3" layoutX="574.0" layoutY="212.0" maxWidth="123.0" minWidth="123.0" prefHeight="31.0" prefWidth="123.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="cid4" layoutX="574.0" layoutY="252.0" maxWidth="123.0" minWidth="123.0" prefHeight="31.0" prefWidth="123.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="cid5" layoutX="574.0" layoutY="293.0" maxWidth="123.0" minWidth="123.0" prefHeight="31.0" prefWidth="123.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="cid2" layoutX="574.0" layoutY="176.0" maxWidth="123.0" minWidth="123.0" prefHeight="31.0" prefWidth="123.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+   </children>
+</AnchorPane>

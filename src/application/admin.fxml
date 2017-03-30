@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1281.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.admin">
+   <children>
+      <JFXButton fx:id="update" layoutX="36.0" layoutY="379.0" onAction="#updateAction" text="UPDATE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="insert" layoutX="15.0" layoutY="454.0" onAction="#insertAction" prefHeight="45.0" prefWidth="105.0" text="INSERT">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="delete" layoutX="137.0" layoutY="369.0" onAction="#deleteAction" prefHeight="45.0" prefWidth="99.0" text="DELETE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <TableView fx:id="status" layoutX="253.0" layoutY="14.0" prefHeight="632.0" prefWidth="1106.0">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="318.0" text="NAME" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="load" layoutX="140.0" layoutY="454.0" onAction="#loadAction" prefHeight="45.0" prefWidth="93.0" text="LOAD">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <TextField fx:id="nameT" layoutX="13.0" layoutY="27.0" prefHeight="45.0" prefWidth="231.0" promptText="NAME" />
+      <TextField fx:id="annualT" layoutX="13.0" layoutY="95.0" prefHeight="45.0" prefWidth="231.0" promptText="ANNUAL-STATUS" />
+      <TextField fx:id="fastT" layoutX="13.0" layoutY="163.0" prefHeight="45.0" prefWidth="231.0" promptText="FASTRACK ELIGIBILITY" />
+      <TextField fx:id="deptT" layoutX="13.0" layoutY="233.0" prefHeight="45.0" prefWidth="231.0" promptText="department" />
+      <TextField fx:id="semT" layoutX="13.0" layoutY="295.0" prefHeight="45.0" prefWidth="231.0" promptText="semester" />
+      <JFXButton fx:id="feedback" layoutX="723.0" layoutY="661.0" onAction="#feedbackReport" text="Feedback Report">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="logout" layoutX="95.0" layoutY="523.0" onAction="#LogOutAction" text="LogOut">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
